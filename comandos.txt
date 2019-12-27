@@ -1,0 +1,15 @@
+--dotnet install Microsoft.Data.Sqlite
+
+dotnet add package Microsoft.Data.Sqlite
+dotnet add package Syncfusion.SfDataGrid.WinForms --version 17.3.0.29
+dotnet add package Microsoft.CodeAnalysis.Scripting
+dotnet add package Microsoft.CodeAnalysis.CSharp.Scripting
+
+dotnet new winforms
+
+sqlite3.exe .\hello.db
+
+	
+dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
+
+dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
